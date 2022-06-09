@@ -1,0 +1,550 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+}
+.wrapper
+{
+  width: 100%;
+}
+/* --------------------------------- Menu ----------------------------------------------- */
+.menu
+{
+  width: 18%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #000000;
+  color: #b2b2b2;
+  padding: 0 24px;
+}
+.logo
+{
+  color: #ffff;
+  width: 100%;
+  margin-top: 24px;
+  margin-bottom: 38px;
+  display: flex;
+  align-items: center;
+}
+.logo > i
+{
+  font-size: 40px;
+}
+.logo > span
+{
+  font-size: 24px;
+  font-weight: 700;
+  padding-left: 5px;
+}
+.logo > span > sup
+{
+  font-size: 5px;
+}
+.menuItem
+{
+  width: 100%;
+  line-height: 25.6px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  cursor: pointer;
+}
+.menuItem:hover
+{
+  color: #ffff;
+}
+.menuItem > i
+{
+  width: 15%;
+  font-size: 24px;
+  padding: 0 2px;
+}
+.menuItem > span
+{
+  font-weight: 700;
+  padding-left: 16px;
+  font-size: 14px;  
+  text-align: left;
+}
+.menu > .menuItem:nth-child(4)
+{
+  margin-bottom: 40px;
+}
+.menu > .tangle
+{
+  width: 100%;
+  height: 1px;
+  background-color: #b3b3b3;
+  margin-bottom: 90px;
+}
+/* --------------------------------- Header ----------------------------------------------- */
+.header
+{
+  width: 82%;
+  height: 64px;
+  background-color: #121212;
+  position: fixed;
+  margin-left: 18%;
+  padding: 0 30px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+}
+.header > .navigationArrow > i
+{
+  padding: 5px 10px;
+  border-radius: 30px;
+  background-color: #2b2721;
+  font-size: 22px;
+  color: #a6a6a6;
+  margin-right: 15px;
+}
+.header > .navigationBtn > span
+{
+  padding: 7px 15px;
+  color: #f4f4f4;
+  border: 1px solid #727272;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  margin-left: 32px;
+  cursor: pointer;
+}
+.header > .navigationBtn > span:hover
+{
+  border-color: #ffff;
+}
+/* --------------------------------- playListSpace Space ----------------------------------------------- */
+.contentSpace
+{
+  background-color: #121212;
+  width: 100%;
+  padding-top: 88px;
+  padding-left: 22%;
+  padding-bottom: 88px;
+  min-height: 100vh;
+}
+.playListSpace
+{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* display: none; */
+}
+.title
+{
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffff;
+}
+.playListContainer
+{
+  background-color: #121212;
+  width: 100%;
+  margin-top: 21px;
+  display: flex;
+  overflow: hidden;
+  padding-bottom: 40px;
+  flex-wrap: wrap;
+}
+.playListItem
+{
+  width: 20%;
+  height: 40%;
+  border-radius: 7px;
+  background-color: #161616;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin-right: 24px;
+  margin-bottom: 30px;
+  align-items: center;
+  justify-content: flex-start;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.playListItem:hover
+{
+ background-color: rgba(179, 179, 179, 0.1);
+}
+.playListItem:hover .image > .playBtnPlayList
+{
+  display: block;
+  opacity: 1;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+} 
+.playListItem > .image
+{
+  width: 100%;
+  position: relative;
+  height: 70%;
+  min-height: fit-content;
+  max-height: fit-content;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 3px 3px 8px 5px #080808;
+  z-index: 0;
+}
+.playListItem > .image > img
+{
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.playListItem > .playListName
+{
+  margin-top: 30px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffff;
+}
+.playListItem > .image > .playBtnPlayList
+{
+  position: absolute;
+  bottom: -10%;
+  right: 10%;
+  opacity: 0;
+  font-size: 20px;
+  padding: 10px 15px;
+  background-color: #1FDF64;  
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+/* --------------------------------- List song in album space ----------------------------------------------- */
+.listSongInAlbumSpace
+{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: none;
+}
+.albumLabel
+{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 10%;
+  left: 14%;
+}
+.albumLabel > .image
+{
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+.albumLabel > .image:hover  .coverLayer
+{
+  display: flex;
+}
+.albumLabel > .image:hover  img
+{
+  transform: scale(1.15); 
+}
+.albumLabel > .image > .coverLayer
+{
+  position: absolute;
+  background-color: #060909ab;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  z-index: 1;
+  cursor: pointer;
+  display: none;
+  transition: all 0.5s;
+}
+.albumLabel > .image > .coverLayer > i
+{
+  font-size: 16px;
+  padding: 17px 20px;
+  border-radius: 40px;
+  color: #ffff;
+  border: 1px solid #ffff;
+}
+#pauseBtn_albumLabel
+{
+  display: none;
+}
+.albumLabel > .image > img
+{
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: all 0.5s;
+}
+.albumLabel > .title
+{
+  text-align: center;
+  margin-top: 20px;
+}
+.albumLabel > button
+{
+  width: 50%;
+  margin-top: 50px;
+  background-color: #7200a1;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0;
+  color: #ffff;
+  font-size: 24px;
+  cursor: pointer;
+
+  border: none;
+}
+.albumLabel > button > i
+{
+  padding-right: 10px;
+  font-size: 18px;
+}
+#pauseBtn_Album
+{
+  display: none;
+}
+.SongList 
+{
+  width: 100%;
+  text-align: start;
+  padding-left: 40%;
+}
+.SongList > .tableSongList
+{
+  width: 100%;
+  color: #ffff;
+  padding-right: 60px;
+  border-spacing: 0;
+}
+.tableSongList  th
+{
+  text-align: start;
+  font-size: 18px;
+  padding: 10px 0px;
+  border-bottom: 1px solid #b3b3b3;
+}
+.tableSongList  td
+{
+  font-size: 16px;
+}
+.tableSongList tr > td:first-child
+{
+  text-align: center;
+}
+.tableSongList tr
+{
+  cursor: pointer;
+}
+.tableSongList tr:hover
+{
+  background-color: #313434;
+}
+.tableSongList tr > td:last-child
+{
+  text-align: end;
+}
+.tableSongList  .indexColumn
+{
+  width: 10%;
+  text-align: center;
+}
+.tableSongList  .nameColumn
+{
+  width: 60%;
+  text-align: start;
+}
+.tableSongList  .authorColumn
+{
+  width: 30%;
+  text-align: end;
+}
+.nameSongRow
+{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.nameSongRow > span
+{
+  margin-left: 20px;
+}
+.tableSongList  tr > td > .image
+{
+  margin: 22px 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.tableSongList tr > td > .image > img
+{
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+/* --------------------------------- Music player bar ----------------------------------------------- */
+.musicPlayerBar
+{
+  width: 100%;
+  height: 90px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #181818;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+}
+audio 
+{
+  display: none;
+}
+.musicInfor
+{
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.musicInfor > .title > .musicName
+{
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffff;
+}
+.musicInfor > .title > .author
+{
+  font-size: 12px;
+  font-weight: 400;
+  color: #b3b3b3;
+}
+.musicInfor > .image
+{
+  width: 20%;
+  padding: 10px 10px;
+  overflow: hidden;
+}
+.musicInfor > .image > img
+{
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.PlayArea
+{
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.PlayArea > .controlMusic
+{
+  width: 100%;
+  margin: 5px auto;
+  font-size: 16px;
+  padding: 0 45px;
+  padding-top: 10px;
+  color: #bababa;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  cursor: pointer;
+  align-items: center;
+}
+.PlayArea > .controlMusic > i
+{
+  cursor: pointer;
+}
+#playBtn, #pauseBtn
+{
+  padding: 12px 14px;
+  background-color: #ffff;
+  color: #000000;
+  border-radius: 30px;
+  text-align: center;
+}
+#previousSongBtn:hover, #nextSongBtn:hover
+{
+  color: #ffff;
+}
+
+#pauseBtn
+{
+  display: none;
+}
+.toggle 
+{
+  color: green;
+}
+.PlayArea > .rangeInputPLayer
+{
+  width: 100%;
+  color: #ffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.PlayArea > .rangeInputPLayer > input
+{
+  margin: 0 auto;
+  width: 80%;
+  height: 3px;
+  cursor: pointer;
+  background-color: #ffff;
+}
+.feature
+{
+  width: 30%;
+  display: flex;
+  font-size: 18px;
+  flex-wrap: nowrap;
+  padding-top: 24px;
+  padding-right: 20px;
+  justify-content: flex-end;
+  align-items: center;
+  color: #bababa;
+}
+.feature > .volume
+{
+  margin-left: 25px;
+  display: flex;
+  align-items: center;
+}
+#lowVolume, #noneVolume
+{
+  display: none;
+}
+.feature > .volume > input
+{
+  height: 3px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.feature  i
+{
+  cursor: pointer;
+}
+.feature  i:hover
+{
+  color: #ffff;
+}

@@ -1,0 +1,3 @@
+shuffleBtn 
+showListSong
+control volume

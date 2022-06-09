@@ -1,0 +1,69 @@
+@media only screen and (max-width: 1024px) 
+{
+  .logo > i
+    {
+      font-size: 24px;
+    }
+  .logo > span
+  {
+    font-size: 12px;
+  }
+  .menuItem > i
+  {
+    font-size: 14px;
+  }
+  .menuItem > span
+  {
+    font-size: 10px;
+  }
+  .playListItem > .playListName
+  {
+    font-size: 14px;
+  }
+  .header > .navigationArrow > i
+  {
+    font-size: 18px;
+  }
+  .header > .navigationBtn > span
+  {
+    font-size: 12px;
+  }
+  /* .albumLabel
+  {
+    top: 20%;
+  } */
+  .albumLabel > .image
+  {
+    width: 150px;
+    height: 150px;
+  }
+  .albumLabel > .image > .coverLayer > i
+  {
+    font-size: 14px;
+  }
+  .albumLabel > .title
+  {
+    font-size: 18px;
+  }
+  .albumLabel > button
+  {
+    margin-top: 30px;
+    width: 40%;
+  }
+  .albumLabel > button > i
+  {
+    font-size: 14px;
+  }
+  .tableSongList  th
+  {
+    font-size: 14px;
+  }
+  .tableSongList  td
+  {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 740px) 
+{
+
+}
